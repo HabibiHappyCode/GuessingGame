@@ -11,16 +11,17 @@ let motivateText = [
     "you are stronger than you think"
 ];
 let current = 0;
+let attemptValue = 0
 
 let randomNum = Math.trunc(
     Math.random() * 101
 )
 
-// console.log(randomNum);
+console.log(randomNum);
 
-// // let randomNum = 1;
+// let randomNum = 1;
 
-// console.log(randomNum)
+console.log(randomNum)
 
 
 const screen = document.getElementById('screen-text');
@@ -39,11 +40,13 @@ submit.addEventListener('click', (e) => {
     screen.value = ""
 
 
-    if (current > motivateText.length) {
+    if (current > motivateText.length -2) {
         current = 0;
     } else {
         current++
     }
+
+    console.log(current)
     motivate.textContent = motivateText[current];
     error.innerHTML = "You chose " + screenValue + ", you are wrong";
 
@@ -68,11 +71,9 @@ submit.addEventListener('click', (e) => {
         },1000)
     }
 
+    console.log(attempt.textContent = attemptValue++ + "mm")
 
-    let attemptValue = 0
 
-    attempt.textContent = current
-    console.log(attempt)
 });
 
 hint.addEventListener('click', (e) => {
