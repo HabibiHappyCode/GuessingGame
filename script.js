@@ -17,11 +17,11 @@ let randomNum = Math.trunc(
     Math.random() * 101
 )
 
-console.log(randomNum);
+// console.log(randomNum);
 
-// let randomNum = 1;
+// // let randomNum = 1;
 
-console.log(randomNum)
+// console.log(randomNum)
 
 
 const screen = document.getElementById('screen-text');
@@ -46,7 +46,7 @@ submit.addEventListener('click', (e) => {
         current++
     }
 
-    console.log(current)
+    // console.log(current)
     motivate.textContent = motivateText[current];
     error.innerHTML = "You chose " + screenValue + ", you are wrong";
 
@@ -59,10 +59,10 @@ submit.addEventListener('click', (e) => {
      
     if(screenValue > randomNum) {
         hintText.innerHTML = "What you chose is too big"
-        console.log("big");
+        // console.log("big");
     } else {
         hintText.innerHTML = "What you chose is too small"
-        console.log("small");
+        // console.log("small");
     }
 
     if (screenValue == randomNum) {
@@ -71,7 +71,7 @@ submit.addEventListener('click', (e) => {
         },1000)
     }
 
-    console.log(attempt.textContent = attemptValue++ + "mm")
+    attempt.textContent = attemptValue++
 
 
 });
