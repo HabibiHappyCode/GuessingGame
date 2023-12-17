@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukky Guesser</title>
+    <link rel="icon" type="image/x-icon" href="./luky.jpg">
+</head>
+<link rel="stylesheet" href="./style.css">
+
+<body>
+    <div class="container">
+        <h1>choose a number between 1 - 100</h1>
+
+        <div class="screen">
+            <input type="number" name="text" id="screen-text" maxlength="3" title="Are you a lucky guesser?">
+            <button type="submit" class="submit">check</button>
+        </div>
+
+        <p class="motivate-text"></p>
+        <p class="error"></p>
+        <p class="hints"></p>
+        <button class="hint-btn">hints</button>
+    </div>
+    
+    
+    <div class="modal">
+        <div class="modal-2">
+            <h3>congratulations 🥳🥳</h3>
+            <h4>you are a lucky guesser 🤩🤩🤩</h4>
+            <p>you had <span class="attempt"> </span> attempts</p>
+            <button class="restart">restart</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

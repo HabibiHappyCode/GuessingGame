@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: dancing-scripts;
+    src: url(./DancingScript-Bold.ttf);
+}
+
+.container {
+    background: linear-gradient(120deg, pink, hotpink, pink);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 7em; 
+}
+
+.container h1 {
+    font-family: sans-serif;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+@media screen and (max-width: 539px) {
+    .container h1 {
+      font-size: 25px;
+    }
+}
+
+.container .screen {
+    margin-bottom: 2em;
+    display: flex;
+}
+
+.container .screen input {
+    width: 100%;
+    height: auto;
+    border: none;
+    font-size: 1.2em;
+    outline: none;
+    padding: 10px;
+    color: hotpink;
+    font-family: sans-serif;
+    border-radius: 20px 0 0 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.container .screen button{
+    background: #fe35fe;
+    border: none; 
+    outline:  none;
+    color: white;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    transition: all 0.5s ease-in;
+    cursor: pointer
+}
+
+.container .screen button:hover {
+    background: #cf0ccf;
+}
+
+.container .motivate-text {
+    font-family: dancing-scripts;
+    font-weight: 900;
+    font-size: 1.5em;
+    color:#fff;
+    text-transform: capitalize;
+    margin-bottom: 16px
+}
+
+.container .error {
+    color: red;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container .error.green {
+    color: green;
+}
+
+.container .hints {
+    font-family: serif;
+    text-transform: capitalize;
+    margin: 10px;
+    color: #fff;
+    visibility: hidden;
+}
+
+.container .hints.block  {
+    visibility: visible;
+}
+
+.container .hint-btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #cf0ccf;
+    text-transform: capitalize;
+    transition: all 0.3s ease-out ;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.container .hint-btn:hover{
+    background: #cf0ccf;
+    color: white;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -100;
+}
+
+.modal.show {
+    z-index: 100;
+}
+
+.modal .modal-2 {
+    background: #cf0ccf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em 50px;
+    border-radius: 10px;
+}
+
+.modal .modal-2 h3 {
+    font-family: sans-serif;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.modal .modal-2 h4 {
+    text-transform: capitalize;
+    color: white;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal .modal-2 p {
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.modal .modal-2 p span {
+    color: white;
+    font-size: 1.2em;
+}
+
+.modal .modal-2 button{
+    padding: 5px 10px;
+    color: white;
+    background-color: lawngreen;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: all ease 0.2s;
+    cursor: pointer
+
+}
+
+.modal .modal-2 button:hover {
+    background-color: rgb(166, 247, 85);
+}
+
+@media screen and (max-width:474px) {
+    .modal .modal-2 {
+        padding: 5em 10px;
+    }
+}
